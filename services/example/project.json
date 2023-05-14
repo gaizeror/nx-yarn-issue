@@ -1,0 +1,28 @@
+{
+    "name": "example",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "services/example/src",
+    "projectType": "application",
+    "targets": {
+      "build": {
+        "executor": "@nx/webpack:webpack",
+        "outputs": ["{options.outputPath}"],
+        "options": {
+          "outputPath": "dist/services/example",
+          "main": "services/example/src/index.ts",
+          "tsConfig": "services/example/tsconfig.app.json",
+          "generatePackageJson": true,
+          "maxWorkers": 2,
+          "compiler": "tsc",
+          "target": "node"
+        },
+        "configurations": {
+          "production": {
+            "optimization": true
+          }
+        }
+      }
+    },
+    "tags": []
+  }
+  

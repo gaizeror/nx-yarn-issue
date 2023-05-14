@@ -1,0 +1,8 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "dependencies": {
+    "@google-cloud/pubsub": "3.6.0"
+  },
+  "main": "main.js"
+}

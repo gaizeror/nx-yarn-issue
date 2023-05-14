@@ -1,0 +1,2 @@
+(()=>{"use strict";var e=[,e=>{e.exports=require("@google-cloud/pubsub")}],r={};function o(t){var u=r[t];if(void 0!==u)return u.exports;var s=r[t]={exports:{}};return e[t](s,s.exports,o),s.exports}var t={};(()=>{var e=t;Object.defineProperty(e,"__esModule",{value:!0});const r=o(1);console.log(r.PubSub.name)})();var u=exports;for(var s in t)u[s]=t[s];t.__esModule&&Object.defineProperty(u,"__esModule",{value:!0})})();
+//# sourceMappingURL=main.js.map

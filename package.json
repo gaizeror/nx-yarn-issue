@@ -1,0 +1,12 @@
+{
+    "name": "nx-yarn-issue",
+    "dependencies": {
+        "@google-cloud/pubsub": "3.6.0"
+    },
+    "devDependencies": {
+        "@nx/webpack": "16.1.4",
+        "nx": "16.1.4",
+        "typescript": "4.9.4"
+    },
+    "packageManager": "yarn@3.5.1"
+}

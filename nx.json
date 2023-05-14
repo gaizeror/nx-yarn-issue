@@ -1,0 +1,53 @@
+{
+    "tasksRunnerOptions": {
+      "default": {
+        "runner": "nx/tasks-runners/default",
+        "options": {
+          "cacheableOperations": [
+            "build",
+            "test",
+            "lint",
+            "package",
+            "prepare",
+            "openapi"
+          ]
+        }
+      }
+    },
+    "pluginsConfig": {
+      "@nx/js": {
+        "analyzeSourceFiles": true
+      }
+    },
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/**/*",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/nx.json",
+        "{workspaceRoot}/tsconfig.base.json"
+      ],
+      "production": [
+        "{projectRoot}/src/**/*",
+        "!{projectRoot}/**/*.spec.ts",
+        "!{workspaceRoot}/.eslintrc.json"
+      ]
+    },
+    "extends": "nx/presets/npm.json",
+    "targetDefaults": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": ["production", "^production"]
+      }
+    },
+    "affected": {
+      "defaultBase": "main"
+    },
+    "workspaceLayout": {
+      "appsDir": "services",
+      "libsDir": "libs"
+    },
+    "$schema": "./node_modules/nx/schemas/nx-schema.json"
+  }
+  
